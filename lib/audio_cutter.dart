@@ -26,7 +26,7 @@ class AudioCutter {
      if(File("${directory!.path}/trimmed$extension").existsSync()){
      File("${directory!.path}/trimmed$extension").delete();
       }else{
-        print("delete file error $e");
+        print("delete file error ");
       }
     String outPath = "";
 
