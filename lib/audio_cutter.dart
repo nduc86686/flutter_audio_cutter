@@ -22,8 +22,12 @@ class AudioCutter {
     ///to determine the exact -acodec of the audio file
     String extension =  p.extension(path);
     ///Delete previous file with same name
-    File("${directory!.path}/trimmed$extension").delete();
-
+//     File("${directory!.path}/trimmed$extension").delete();
+    try{
+      File("${directory!.path}/trimmed$extension").delete();
+    }catch(e){
+      print("delete file error $e");
+    }
     String outPath = "";
 
     if (outputDirPath != null) {
